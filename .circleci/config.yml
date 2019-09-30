@@ -35,7 +35,7 @@ jobs:
           command: |
             brew update
             brew cask install android-sdk
-            echo y | $ANDROID_HOME/tools/bin/sdkmanager "platform-tools" "platforms;android-25" "build-tools;25.0.2" "extras;android;m2repository" "extras;google;m2repository"
+            echo y | $ANDROID_HOME/tools/bin/sdkmanager "platform-tools" "platforms;android-28" "build-tools;28.0.2" "extras;android;m2repository" "extras;google;m2repository"
       - restore_cache:
           key: npm-cache-{{ checksum "./package-lock.json" }}
       - run:
