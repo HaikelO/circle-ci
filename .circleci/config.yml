@@ -65,11 +65,11 @@ jobs:
       - run:
           name: "Build iOS"
           command: |
-            ./scripts/build_ios.sh org.nativescript.circleciint
+            tns prepare ios --bundle
       - run:
           name: "Build Android"
           command: |
-            ./scripts/build_android.sh
+            tns build android --bundle
       - persist_to_workspace:
           root: ~/circleci
           paths:
